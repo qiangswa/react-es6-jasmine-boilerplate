@@ -5,6 +5,8 @@ import React from 'react';
 // project
 import APP from 'App';
 
+import logging from 'logwraper';
+
 declare var jasmine;
 declare var fixture
 
@@ -40,5 +42,10 @@ describe('Testing', () => {
   it('should load the json fixture',()=>{
     const result = fixture.load('test.json');
     expect(result).not.toBeNull();
+  })
+
+  it('should log the message',()=>{
+    expect(logging).not.toBeNull();
+    logging.info("hello logging");
   })
 });
