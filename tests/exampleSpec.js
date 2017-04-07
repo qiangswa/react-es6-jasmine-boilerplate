@@ -3,7 +3,7 @@ import path from 'path';
 // vendors
 import React from 'react';
 // project
-import APP from 'App';
+import APP from 'components/App';
 
 import logging from 'logwraper';
 

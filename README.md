@@ -8,4 +8,13 @@ The set up Karma with Jasmine in Create React App idea is from the guide [here](
 
 The [karma-fixture](https://github.com/billtrik/karma-fixture) is using for loading the fixtures of the tests.
 
-I'll eventually be adding more tools which is required by myself. 
+I'll eventually be adding more tools which is required by myself.
+
+Added react-redux, react-router-redux, react-redux with sample code.
+About the right way of access the this.context.router, read https://github.com/ReactTraining/react-router/issues/3602.
+
+Added redux-devtools with the solution to exclude it from product code. Read page at  https://github.com/gaearon/redux-devtools/blob/master/docs/Walkthrough.md for details.
+
+Updated ES6 support.
+
+Forced to use react-router 3.0.2. Read the comments at https://github.com/reactjs/react-router-redux/issues/367 about this.
