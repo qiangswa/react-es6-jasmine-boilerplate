@@ -4,7 +4,7 @@
  * @Email:  wangqs_eclipse@yahoo.com
  * @Filename: paths.js
  * @Last modified by:   qiangswa
- * @Last modified time: 2017-09-01T12:45:05+10:00
+ * @Last modified time: 2017-09-01T15:30:08+10:00
  * @Copyright: Q.S. Wang(wangqs_eclipse@yahoo.com)
  */
 
@@ -65,4 +65,10 @@ module.exports = {
   publicUrl: getPublicUrl(resolveApp('package.json')),
   servedPath: getServedPath(resolveApp('package.json')),
   testSrc:resolveApp('tests'),
+};
+edPath(resolveApp('package.json')),
+<<<<<<< HEAD
+  testSrc:resolveApp('tests'),
+=======
+>>>>>>> 901a43630ea36522349bd25b3f2989242bf2a104
 };

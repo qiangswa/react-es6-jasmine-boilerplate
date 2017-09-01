@@ -4,12 +4,9 @@
  * @Email:  wangqs_eclipse@yahoo.com
  * @Filename: webpack.config.dev.js
  * @Last modified by:   qiangswa
- * @Last modified time: 2017-09-01T13:56:35+10:00
+ * @Last modified time: 2017-09-01T15:35:18+10:00
  * @Copyright: Q.S. Wang(wangqs_eclipse@yahoo.com)
  */
-
-
-
 'use strict';
 
 const autoprefixer = require('autoprefixer');
@@ -86,6 +83,7 @@ module.exports = {
     // We placed these paths second because we want `node_modules` to "win"
     // if there are any conflicts. This matches Node resolution mechanism.
     // https://github.com/facebookincubator/create-react-app/issues/253
+    //WangQS add src as the import root. TODO: need figure out if any performance issues.
     modules: [paths.appSrc,'node_modules', paths.appNodeModules].concat(
       // It is guaranteed to exist because we tweak it in `env.js`
       process.env.NODE_PATH.split(path.delimiter).filter(Boolean)
@@ -98,7 +96,6 @@ module.exports = {
     // for React Native Web.
     extensions: ['.web.js', '.js', '.json', '.web.jsx', '.jsx'],
     alias: {
-
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
@@ -129,7 +126,6 @@ module.exports = {
             options: {
               formatter: eslintFormatter,
               eslintPath: require.resolve('eslint'),
-
             },
             loader: require.resolve('eslint-loader'),
           },
@@ -155,6 +151,7 @@ module.exports = {
           // Process JS with Babel.
           {
             test: /\.(js|jsx)$/,
+            //WangQS include both src and tests code for babel-loader
             include: [paths.appSrc,paths.testSrc],
             loader: require.resolve('babel-loader'),
             options: {
@@ -273,4 +270,4 @@ module.exports = {
     hints: false,
   },
 };
-
+};
